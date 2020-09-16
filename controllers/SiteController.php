@@ -133,7 +133,8 @@ class SiteController extends Controller
      */
     public function actionHelp()
     {
-        return $this->render('help');
+        $today = date('d-M-Y');
+        return $this->render('help', ['today' => $today]);
     }
 
 
