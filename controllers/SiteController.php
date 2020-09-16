@@ -125,4 +125,17 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * Displays help page.
+     *
+     * @return string
+     */
+    public function actionHelp()
+    {
+        return $this->render('help');
+    }
+
+
+
 }

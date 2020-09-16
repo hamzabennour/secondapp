@@ -12,6 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
+    <h2>LOREM IEPSUM</h2>
 
     <p>Please fill out the following fields to login:</p>
 
