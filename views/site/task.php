@@ -13,6 +13,7 @@
   <th>done </th>
   </tr>
 </thead>
+<tbody>
   <?php foreach( $tasks as $task){ ?>
     <tr>
     <td><?=$task->id?></td>
@@ -20,4 +21,5 @@
     <td><?=$task->done?></td>
     </tr>
   <?php } ?>
+</tbody>
 </table>
