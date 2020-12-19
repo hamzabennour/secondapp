@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ActiveForm;
+use yii\bootstrap\Alert;
 use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -17,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Employees', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
@@ -31,6 +32,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+
+
+    <?= Alert::widget([
+      'options' => [
+          'class' => 'alert-info',
+      ],
+      'body' => 'Create Employee'
+      ]) ?>
 
     <?php $form = ActiveForm::begin(['action' => Url::to(['employees/create']) ]); ?>
 
@@ -47,7 +56,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php ActiveForm::end(); ?>
 
+
+
     </div>
-
-
-
