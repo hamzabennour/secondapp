@@ -38,9 +38,11 @@ class EmployeesController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Employees::find(),
         ]);
+        $model = new Employees();
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'model' => $model
         ]);
     }
 
