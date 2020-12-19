@@ -9,6 +9,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Tasks;
+
 
 class SiteController extends Controller
 {
@@ -127,18 +129,18 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays help page.
+     * Displays task page.
      *
      * @return string
      */
-    public function actionHelp()
+    public function actionTask()
     {
         $today = date('d-M-Y');
-        $user = "Admin";
-    
-        return $this->render('help', [
+        $tasks = Tasks::find()->all();
+
+        return $this->render('task', [
             'today' => $today,
-            'user' => $user
+            'tasks' => $tasks
             ]);
     }
 
